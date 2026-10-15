@@ -1,9 +1,16 @@
 # svg-studio
 
-Editor local para colar/importar um SVG, comparar antes e depois, ver o tamanho e exportar o resultado. Não envia o arquivo para um servidor.
+Optimize an SVG in your browser, compare the original and optimized versions, and export the result. Files are processed locally and are not sent to a server.
 
-## Executar
+## Run locally
 
-Requer Node.js 20.19 ou superior. Rode **npm install** e **npm run dev**. Cole ou importe o arquivo, selecione **Otimizar SVG** e exporte o resultado. **npm test** cobre compactação, segurança e validação; **npm run build** gera dist/.
+Requires Node.js 20.19 or later.
 
-O otimizador remove comentários e grupos vazios, compacta espaços entre tags e remove scripts, eventos, embeds e referências externas. Revise o desenho após exportar, pois SVGs com links externos são simplificados intencionalmente.
+```sh
+npm install
+npm run dev
+```
+
+Paste an SVG or choose a file, then select **Optimize SVG** to preview and export it. Run `npm test` for the optimization and validation tests, or `npm run build` to create the static app in `dist/`.
+
+The optimizer removes comments and empty groups, compacts whitespace, and removes scripts, event handlers, embedded content, and external references. Review the result before using it; SVGs that rely on external links may change.
